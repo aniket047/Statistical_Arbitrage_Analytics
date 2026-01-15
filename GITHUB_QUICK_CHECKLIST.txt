@@ -1,0 +1,155 @@
+# GitHub Push - Quick Checklist
+
+## Pre-Push Checklist (5 Minutes)
+
+- [ ] **Git Installed?**
+  ```powershell
+  git --version
+  ```
+  If not: Download from https://git-scm.com/download/win
+
+- [ ] **GitHub Account Created?**
+  Visit https://github.com and sign up (takes 2 minutes)
+
+- [ ] **GitHub Repository Created?**
+  - Go to https://github.com/new
+  - Name: `Statistical_Arbitrage_Analytics_SAA`
+  - Do NOT add README (we have one)
+  - Do NOT add .gitignore (we have one)
+  - Click "Create repository"
+  - Copy the repository URL
+
+---
+
+## Execution (2 Minutes)
+
+### Step 1: Configure Git (First Time Only)
+```powershell
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+### Step 2: Navigate to Project
+```powershell
+cd "c:\Users\anike\Downloads\Statistical_Arbitrage_Analytics_SAA_FINAL"
+```
+
+### Step 3: Initialize and Push
+```powershell
+# Initialize git
+git init
+
+# Add all files
+git add .
+
+# Create commit
+git commit -m "Initial commit: Production-grade SAA system with regime detection and metrics"
+
+# Add remote (replace YOUR_USERNAME)
+git remote add origin https://github.com/YOUR_USERNAME/Statistical_Arbitrage_Analytics_SAA.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+```
+
+When asked for password: **Use your Personal Access Token** (from https://github.com/settings/tokens)
+
+---
+
+## Verification (30 Seconds)
+
+Visit: `https://github.com/YOUR_USERNAME/Statistical_Arbitrage_Analytics_SAA`
+
+You should see:
+- [ ] All Python files visible
+- [ ] `README.md` displaying
+- [ ] Documentation files present
+- [ ] `.gitignore` applied (no __pycache__ visible)
+- [ ] ~26 files total (project files + docs)
+
+---
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| `git not recognized` | Reinstall Git, restart PowerShell |
+| `Authentication failed` | Use Personal Access Token, not password |
+| `remote origin already exists` | Run: `git remote remove origin` first |
+| `Large files rejected` | That's normal (.gitignore excludes them) |
+| `Can't find directory` | Check current folder with `pwd` |
+
+---
+
+## Total Time Required
+- **First time setup:** ~10 minutes (install + account creation)
+- **Actual push:** ~2-3 minutes
+- **Verification:** ~30 seconds
+
+**Total: ~15 minutes to have your code on GitHub!**
+
+---
+
+## What Gets Pushed
+
+### ✅ Included
+```
+config.py
+main.py
+src/
+  ├─ __init__.py
+  ├─ statistics.py
+  ├─ strategy.py
+  ├─ backtest.py
+  ├─ metrics.py
+  └─ regime_detection.py
+notebooks/
+  ├─ 01_exploratory_analysis.ipynb
+  ├─ 02_cointegration_study.ipynb
+  ├─ 03_regime_detection.ipynb
+  └─ 04_strategy_evaluation.ipynb
+docs/
+requirements.txt
+.gitignore
+README.md
+[8 other documentation files]
+```
+
+### ❌ Excluded (by .gitignore)
+```
+__pycache__/
+.vscode/
+.idea/
+venv/
+data/raw/*.csv  (optional, set by gitignore)
+*.pyc
+```
+
+---
+
+## After Push
+
+### Quick Wins (Optional)
+1. Add repository topics: `quantitative-finance`, `pairs-trading`, `python`
+2. Add GitHub description
+3. Enable "Discussions" for feedback
+4. Pin README for visibility
+
+### Share Your Work
+- Share repository URL with peers
+- Include in portfolio/resume
+- Submit to professors/evaluation
+
+---
+
+## Your Repository URL
+(Fill in after you create it on GitHub)
+
+```
+https://github.com/YOUR_USERNAME/Statistical_Arbitrage_Analytics_SAA
+```
+
+---
+
+**Ready to push? Follow the "Execution" section above!** 🚀
